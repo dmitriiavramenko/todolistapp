@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/bgc"
+    android:id="@+id/layout"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:id="@+id/settingLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:text="@string/settings"
+        android:textAlignment="center"
+        android:textColor="?attr/tc"
+        android:textSize="34sp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/themeswitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settingLogo"
+        android:layout_marginHorizontal="50sp"
+        android:layout_marginTop="80dp"
+        android:minHeight="40dp"
+        android:text="@string/theme"
+        android:textColor="?attr/tc" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/themeswitch"
+        android:layout_marginHorizontal="50sp"
+        android:layout_marginTop="40sp"
+        android:text="@string/textSize"
+        android:textColor="?attr/tc" />
+
+    <LinearLayout
+        android:id="@+id/buttonsHolder"
+        android:layout_marginHorizontal="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="15sp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/small"
+            android:background="?attr/buttnc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="?attr/buttntc"
+            android:layout_marginHorizontal="5sp"
+            android:text="@string/small" />
+
+        <Button
+            android:id="@+id/medium"
+            android:background="?attr/buttnc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="?attr/buttntc"
+            android:layout_marginHorizontal="5sp"
+            android:text="@string/medium" />
+
+        <Button
+            android:id="@+id/large"
+            android:background="?attr/buttnc"
+            android:layout_marginHorizontal="5sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="?attr/buttntc"
+            android:text="@string/large" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/authors"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonsHolder"
+        android:layout_marginHorizontal="120sp"
+        android:layout_marginTop="70dp"
+        android:background="?attr/buttnc"
+        android:onClick="showAuthors"
+        android:text="@string/authors"
+        android:textColor="?attr/buttntc" />
+
+    <LinearLayout
+        android:id="@+id/navBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/authors"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="135dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30sp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners"
+            android:text="SETS"
+            android:textColor="?attr/buttntc" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30sp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners"
+            android:text="main"
+            android:textColor="?attr/buttntc" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30sp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners"
+            android:text="Nav"
+            android:textColor="?attr/buttntc" />
+    </LinearLayout>
+</RelativeLayout>

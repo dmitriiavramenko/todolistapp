@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="bgc" format="color"/>
+    <attr name="tc" format="color"/>
+    <attr name="buttnc" format="color"/>
+    <attr name="buttntc" format="color"/>
+</resources>
