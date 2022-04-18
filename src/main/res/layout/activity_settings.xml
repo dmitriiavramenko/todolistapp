@@ -50,33 +50,36 @@
 
         <Button
             android:id="@+id/small"
-            android:background="?attr/buttnc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="?attr/buttntc"
             android:layout_marginHorizontal="5sp"
-            android:text="@string/small" />
+            android:layout_weight="1"
+            android:background="?attr/buttnc"
+            android:onClick="smlButton"
+            android:text="@string/small"
+            android:textColor="?attr/buttntc" />
 
         <Button
             android:id="@+id/medium"
-            android:background="?attr/buttnc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="?attr/buttntc"
             android:layout_marginHorizontal="5sp"
-            android:text="@string/medium" />
+            android:layout_weight="1"
+            android:background="?attr/buttnc"
+            android:onClick="midButton"
+            android:text="@string/medium"
+            android:textColor="?attr/buttntc" />
 
         <Button
             android:id="@+id/large"
-            android:background="?attr/buttnc"
-            android:layout_marginHorizontal="5sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5sp"
             android:layout_weight="1"
-            android:textColor="?attr/buttntc"
-            android:text="@string/large" />
+            android:background="?attr/buttnc"
+            android:onClick="lrgButton"
+            android:text="@string/large"
+            android:textColor="?attr/buttntc" />
     </LinearLayout>
 
     <Button
@@ -107,7 +110,7 @@
             android:layout_marginHorizontal="30sp"
             android:layout_weight="1"
             android:background="@drawable/rounded_corners"
-            android:text="SETS"
+            android:text="@string/sets"
             android:textColor="?attr/buttntc" />
 
         <Button
@@ -117,7 +120,8 @@
             android:layout_marginHorizontal="30sp"
             android:layout_weight="1"
             android:background="@drawable/rounded_corners"
-            android:text="main"
+            android:onClick="mainPage"
+            android:text="@string/main"
             android:textColor="?attr/buttntc" />
 
         <Button
@@ -127,7 +131,8 @@
             android:layout_marginHorizontal="30sp"
             android:layout_weight="1"
             android:background="@drawable/rounded_corners"
-            android:text="Nav"
+            android:onClick="locPage"
+            android:text="@string/loca"
             android:textColor="?attr/buttntc" />
     </LinearLayout>
 </RelativeLayout>

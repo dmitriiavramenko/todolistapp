@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SwitchCompat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 
 public class SettingsActivity extends AppCompatActivity {
     SwitchCompat themeswitch;
+    public static int textSize = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
@@ -37,9 +39,33 @@ public class SettingsActivity extends AppCompatActivity {
         AlertDialog.Builder buildDialog = new AlertDialog.Builder(this);
         buildDialog.setTitle("Authors")
                 .setCancelable(false)
-                .setMessage("Main: Nikita Korolkov                             Navigation: Gaurav Saini                        Settings: Dmitrii Avramenko")
+                .setMessage("Main: Nikita Korolkov                             Location: Gaurav Saini                        Settings: Dmitrii Avramenko")
                 .setPositiveButton("Close", (dialogInterface, i) -> dialogInterface.cancel());
         AlertDialog dialog = buildDialog.create();
         dialog.show();
+    }
+
+    public void mainPage(View v) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void locPage(View v) {
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void smlButton(View v) {
+        textSize = 0;
+    }
+
+    public void midButton(View v) {
+        textSize = 1;
+    }
+
+    public void lrgButton(View v) {
+        textSize = 2;
     }
 }

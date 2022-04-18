@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:background="?attr/bgc"
     tools:context=".MainActivity">
 
@@ -85,13 +87,14 @@
 
         <Button
             android:id="@+id/sets"
-            android:layout_marginTop="1sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="1sp"
             android:layout_weight="1"
             android:background="@drawable/rounded_corners"
-            android:text="SETS"
+            android:onClick="setsPage"
+            android:text="@string/sets"
             android:textColor="?attr/buttntc" />
 
         <Button
@@ -102,18 +105,19 @@
             android:layout_marginHorizontal="30sp"
             android:layout_weight="1"
             android:background="@drawable/rounded_corners"
-            android:text="main"
+            android:text="@string/main"
             android:textColor="?attr/buttntc" />
 
         <Button
             android:id="@+id/nav"
-            android:layout_marginTop="1sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="1sp"
             android:layout_weight="1"
             android:background="@drawable/rounded_corners"
-            android:text="Nav"
+            android:onClick="locPage"
+            android:text="@string/loca"
             android:textColor="?attr/buttntc" />
     </LinearLayout>
 

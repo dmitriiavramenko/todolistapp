@@ -1,8 +1,10 @@
 package com.example.settingsmodule;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -13,16 +15,23 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<String> items;
-    private ArrayAdapter<String> itemsAdapter;
+    private ArraySizeAdapter<String> itemsAdapter;
     private ListView listView;
     private Button addbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            setTheme(R.style.Theme_Dark);
+        }
+        else {
+            setTheme(R.style.Theme_Light);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -37,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         items = new ArrayList<>();
-        itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, items);
+        itemsAdapter = new ArraySizeAdapter<String>(this, items);
         listView.setAdapter(itemsAdapter);
         setUpListViewListener();
     }
@@ -68,5 +77,15 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Please enter text.", Toast.LENGTH_LONG).show();
         }
 
+    }
+
+    public void setsPage(View v) {
+        Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    public void locPage(View v) {
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
     }
 }
